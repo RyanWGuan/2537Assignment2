@@ -1,0 +1,12 @@
+<li class="list-group-item d-flex justify-content-between align-items-center">
+  <span>
+    <%= user.name %>
+    <span class="badge <%= user.user_type === 'admin' ? 'bg-danger' : 'bg-secondary' %> ms-2">
+      <%= user.user_type || 'user' %>
+    </span>
+  </span>
+  <div class="d-flex gap-2">
+    <a href="/admin/promote?id=<%= user._id %>" class="btn btn-sm btn-success">Promote to Admin</a>
+    <a href="/admin/demote?id=<%= user._id %>" class="btn btn-sm btn-danger">Demote to User</a>
+  </div>
+</li>

@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+
+<h1 class="mb-4">Users</h1>
+
+<ul class="list-group">
+  <% for (let i = 0; i < users.length; i++) { %>
+    <%- include('partials/user', {user: users[i]}) %>
+  <% } %>
+</ul>
+
+<%- include("partials/footer") %>

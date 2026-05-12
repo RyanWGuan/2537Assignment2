@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<% if (authenticated) { %>
+  <div class="text-center py-5">
+    <h1 class="display-5 fw-bold">Hello, <%= name %>!</h1>
+    <p class="lead text-muted mb-4">Welcome back. What would you like to do?</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="/members" class="btn btn-primary btn-lg">Go to Members Area</a>
+      <a href="/logout" class="btn btn-outline-secondary btn-lg">Logout</a>
+    </div>
+  </div>
+<% } else { %>
+  <div class="text-center py-5">
+    <h1 class="display-5 fw-bold">Welcome to MyApp</h1>
+    <p class="lead text-muted mb-4">Please sign up or log in to continue.</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="/signup" class="btn btn-primary btn-lg">Sign Up</a>
+      <a href="/login" class="btn btn-outline-primary btn-lg">Log In</a>
+    </div>
+  </div>
+<% } %>
+
+<%- include("partials/footer") %>
