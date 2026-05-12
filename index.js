@@ -163,7 +163,7 @@ app.get("/members", sessionValidation, (req, res) => {
     res.render("members", { name: req.session.name });
 });
 
-app.get("/cats", (req, res) => {
+app.get("/cats", sessionValidation, (req, res) => {
     res.render("cats");
 });
 
